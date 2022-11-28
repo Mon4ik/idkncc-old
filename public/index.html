@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="font-mono">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDKNCC</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white [line-height:15px]">
+    <div class="container mx-auto px-5">
+        <p>Hello world!</p>
+        <p>------------</p>
+        <p>This is my playground, where i have: tests, tools and etc.</p>
+        <p>&nbsp;</p>
+        <p>I'm fullstack web developer, using:</p>
+        <p>&nbsp;- NextJS</p>
+        <p>&nbsp;- Node, Typescript</p>
+        <p>&nbsp;- Typescript</p>
+        <p>&nbsp;</p>
+
+        <noscript>
+            <p>Oops</p>
+            <p>My website requires JavaScript for buttons</p>
+            <p>Enable it :I</p>
+        </noscript>
+
+        <div class="flex flex-row gap-2">
+            <div class="btn" id="about"></div>
+            <div class="btn" id="playground"></div>
+        </div>
+
+        <div class="flex flex-row gap-2">
+            <div class="btn" id="files"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        initButton("#about", "About Me", () => {
+            location.pathname = "/about"
+        })
+
+        initButton("#playground", "Playground", () => {
+            location.pathname = "/playground"
+
+        })
+
+        initButton("#files", "Files", () => {
+            location.pathname = "/files"
+
+        })
+    </script>
+</body>
+
+</html>

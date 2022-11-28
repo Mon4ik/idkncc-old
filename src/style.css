@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+    width: fit-content;
+}
+
+.btn {
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+    user-select: none;
+}
+
+.btn p {
+    display:inline-block;
+}
+
+.btn:hover {
+    @apply bg-gray-800
+}
+
+.btn:active {
+    @apply bg-gray-600
+}

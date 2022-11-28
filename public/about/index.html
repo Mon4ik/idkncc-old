@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="font-mono">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDKNCC - About</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="bg-black text-white [line-height:15px]">
+    <div class="container mx-auto px-5">
+        <p>About Me</p>
+        <p>--------</p>
+        <p>My name is Dmitry</p>
+        <p id="age">I'm ???</p>
+        <p>I love web and ios</p>
+        <p>&nbsp;</p>
+        <p>Languages:</p>
+        <p>&nbsp;- JavaScript / Typescript</p>
+        <p>&nbsp;- Swift</p>
+        <p>&nbsp;</p>
+        <p>Frameworks:</p>
+        <p>&nbsp;- NextJS, React, ExpressJS</p>
+        <p>&nbsp;- SwiftUI</p>
+
+        <noscript>
+            <p>Oops</p>
+            <p>My website requires JavaScript for buttons</p>
+            <p>Enable it :I</p>
+        </noscript>
+
+    </div>
+    <script src="/script.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            function getAge(dateString) {
+                var today = new Date();
+                var birthDate = new Date(dateString);
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                return age;
+            }
+            document.querySelector("#age").innerText = `I'm ${getAge("2008-06-18T00:00:00")}`
+        })
+    </script>
+</body>
+
+</html>
